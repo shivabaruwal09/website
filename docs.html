@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OtinXSandip API Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai-sublime.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #444;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            flex-basis: 30%;
+            padding: 1.5rem;
+            text-align: center;
+            background-color: #555;
+            border-radius: 8px;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem 0;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .features {
+                flex-wrap: wrap;
+            }
+
+            .feature {
+                flex-basis: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* IDE box style */
+        .code-block {
+            background-color: #555;
+            border: 1px solid #777;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            overflow-wrap: break-word;
+        }
+
+        /* Add style for clickable links */
+        .contact-link {
+            color: #4CAF50;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OtinXSandip API Documentation</h1>
+        <p>MADE BY <a class="contact-link" href="https://www.facebook.com/otinxsandip09" target="_blank">OTINXSANDIP</a></p>
+    </header>
+    <div class="container">
+        <p>To use the API, make a GET request to <code>endpoints</code> with </code> query parameters as needed.</p>
+
+        <div class="code-block">
+            <p>GPT</p>
+            <pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+  const prompt = "hi";
+    const apiurl = 'https://sandipbaruwal.onrender.com/gpt?prompt=${prompt}';
+    const response = await axios.get(apiurl);
+    const message = response.data.answer;
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+        </div>
+
+      <div class="code-block">
+        <p>linerai</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/liner?prompt=hi';
+      const response = await axios.get(apiurl);
+      const message = response.data.answer;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+
+        <div class="code-block">
+            <p>Gemini</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+    const prompt = "hi";
+    const apiurl = 'https://sandipbaruwal.onrender.com/gemini?prompt=${encodeURIComponent(prompt)}';
+    const response = await axios.get(apiurl);
+    const message = response.data.answer;
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+
+        <div class="code-block">
+          <p>Gemini2</p>
+          <pre><code class="javascript">const axios = require('axios');
+async function fetchData() {
+  try {
+    const prompt = "hi explain this image";
+    const url = "https://i.ibb.co/h8TRLRv/image.jpg";
+    const apiUrl = `https://sandipbaruwal.onrender.com/gemini2?prompt=${prompt}&url=${url}`;
+    const response = await axios.get(apiUrl);
+    const message = response.data.answer;    console.log(message);
+  } catch (error) {    console.error(error);
+  }
+}
+
+fetchData(); </code></pre>
+
+        </div>
+      <div class="code-block">
+        <p>mistral</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const prompt = "hi";
+      const apiurl = 'https://sandipbaruwal.onrender.com/mistral?prompt=${prompt}';
+      const response = await axios.get(apiurl);
+      const message = response.data.answer;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+
+        <div class="code-block">
+            <p>GPT2</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+  const prompt = "hi";
+  const uid = "4", //fb id
+  const apiurl =
+`https://sandipbaruwal.onrender.com/gpt2?prompt=${prompt}&uid=${uid}`;
+    const response = await axios.get(apiurl);
+    const message = response.data;
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+      <div class="code-block">
+        <p>llama</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/metallama?prompt=hi+how+are+you'; //put  your prompt herr
+      const response = await axios.get(apiurl);
+      const message = response.data.answer;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>sim</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/sim?chat=hi+how+are+you&lang=en'; //put  your question here
+      const response = await axios.get(apiurl);
+      const message = response.data.answer;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>gen</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/gen?prompt=cat&model=19'; //put  your prompt here and models are 22
+      const response = await axios.get(apiurl);
+      const message = response.data; //image response make sure to add image path
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>art images</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/art?model=6&url=https://sandipbaruwal.onrender.com/cache/image.jpg'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;  //image response 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>sdxl</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/sdxl?prompt=cat&model=4'; //image response make sure to add image path  models are 5
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>imagine</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://otinxsandip.vercel.app/test?prompt=cat&model=19'; //put  your prompt here and model are 24
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>sdxl2</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://otinxsandip.vercel.app/sdxl?prompt=cat&model=4'; //put  your promot and model models are 5 here
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+
+        <div class="code-block">
+            <p>Stalk Instagram</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+    const apiurl = 'https://sandipbaruwal.onrender.com/iginfo?username=otinxsandip';
+    const response = await axios.get(apiurl);
+    const message = response.data;
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+
+      <div class="code-block">
+        <p>movie info</p>
+      <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/movieinfo?name=thor';
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+
+      </div>
+
+        <div class="code-block">
+            <p> Lyrics</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+    const apiurl = 'https://sandipbaruwal.onrender.com/lyrics?lyrics=roar';
+    const response = await axios.get(apiurl);
+    const message = response.data;
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+
+        <div class="code-block">
+            <p>Lyrics With Multiple Results</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+    const apiurl = 'https://sandipbaruwal.onrender.com/lyrics2?songname=roar';
+    const response = await axios.get(apiurl);
+    const message = response.data;
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+
+        <div class="code-block">
+            <p>pet</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+    const apiurl = 'https://sandipbaruwal.onrender.com/pet?uid=4';
+    const response = await axios.get(apiurl);
+    const message = response.data; //image response 
+    console.log(message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+      <div class="code-block">
+        <p>gun</p>
+      <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/gun?uid=4';
+      const response = await axios.get(apiurl);
+      const message = response.data; //image response 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+
+      </div>
+
+        <div class="code-block">
+            <p>wanted
+            </p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+    const apiurl = 'https://sandipbaruwal.onrender.com/wanted?uid=4';
+    const response = await axios.get(apiurl);
+    const message = `${response.data.text}`;
+    console.log(message); //image response 
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+
+        <div class="code-block">
+            <p>poster Meme</p>
+<pre><code class="javascript">const axios = require('axios');
+
+async function fetchData() {
+  try {
+
+    const apiurl = 'https://sandipbaruwal.onre der.com/poster?uid=4';
+    const response = await axios.get(apiurl);
+    const message = response.data;
+    console.log(message); //image response 
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();</code></pre>
+
+        </div>
+      <div class="code-block">
+        <p>jail</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/jail?uid=4'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; //image response make sure to add image path
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData(); </code></pre>
+      </div>
+      <div class="code-block">
+        <p>egg</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/egg?uid=4'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; // image response make sure to add file path
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>nokia</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/nokia?uid=4'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; //image response use path 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>imgbb</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/imgbb?link=https://sandipbaruwal.onrender.com/cache/image.jpg'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>imgur</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/imgur?link=https://sandipbaruwal.onrender.com/cache/image.jpg'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>say</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/say?text=hi+how+are+you'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; //voice response 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData(); </code></pre>
+      </div>
+      <div class="code-block">
+        <p>mrbeast</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/beast?text=hi+I+am+Mr+beast'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; // voice response
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>snoop</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/snoop?text=hi+I+am+snoop+yo+nigga'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; //voice response  
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>jane</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/jane?text=hi+I+am+jane'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; // voice response 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>anime images</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/anime'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>couple image</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/dp'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; //voice response 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData(); </code></pre>
+      </div>
+      <div class="code-block">
+        <p>nsfw anime images</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/nsfw'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;  console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>flag game</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/flag'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;  
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>quiz game</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/quiz'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>nsfw image generator</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/pussy?prompt=cat'; 
+      const response = await axios.get(apiurl);
+      const message = response.data.url;
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>insta and facebook downloader </p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/download?url=https://www.facebook.com/reel/3723312621315809?mibextid=rS40aB7S9Ucbxw6v'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;  
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>describe audio mp3 or mp4</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/des?url=http://tinyurl.com/2c45hj4j'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; //text response 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData(); </code></pre>
+      </div>
+      <div class="code-block">
+        <p>Spotify songs</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/spotify?query=roar'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;  console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>Spotify downloader</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/down?url=https://open.spotify.com/track/6or1bKJiZ06IlK0vFvY75k'; 
+      const response = await axios.get(apiurl);
+      const message = response.data;  
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+      <div class="code-block">
+        <p>get images</p>
+        <pre><code class="javascript">const axios = require('axios');
+
+      async function fetchData() {
+      try {
+      const apiurl = 'https://sandipbaruwal.onrender.com/image?name=cat'; 
+      const response = await axios.get(apiurl);
+      const message = response.data; 
+      console.log(message);
+      } catch (error) {
+      console.error(error);
+      }
+      }
+
+      fetchData();</code></pre>
+      </div>
+        <div class="features">
+            <div class="feature">
+                <h3>Simple to Use</h3>
+                <p>Just make a GET request with your prompt, and the API will handle the rest.</p>
+            </div>
+            <div class="feature">
+                <h3>Fast and Reliable</h3>
+                <p>This API is designed for speed and reliability, ensuring quick responses.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 OTINXSANDIP API BY <a class="contact-link" href="https://www.facebook.com/otinxsandip09" target="_blank">OtinXSandip</a></p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+</html>
